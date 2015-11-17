@@ -1,6 +1,6 @@
 Run your Tomcat on OpenShift
 ============================
-This git repository helps you get up and running quickly with a Tomcat 7.0.42 installation on OpenShift.
+This git repository helps you get up and running quickly with a Tomcat 8.0.26 installation on OpenShift.
 
 Create a Do It Yourself (DIY) app on OpenShift
 ----------------------------------------------
