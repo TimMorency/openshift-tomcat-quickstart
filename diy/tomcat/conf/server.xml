@@ -124,11 +124,11 @@
                resourceName="UserDatabase"/>
       </Realm>
 
-      <Realm className="org.apache.catalina.realm.JDBCRealm"
+      <!--<Realm className="org.apache.catalina.realm.JDBCRealm"
       driverName="org.gjt.mm.mysql.Driver"
       connectionURL="jdbc:mysql://localhost:3307/sample?user=tomcat&amp;password=tomcat"
       userTable="users" userNameCol="user_name" userCredCol="user_pass"
-      userRoleTable="user_roles" roleNameCol="role_name"/>
+      userRoleTable="user_roles" roleNameCol="role_name"/>-->
 
 
       <Host name="OPENSHIFT_APP_DNS"   appBase="webapps"
