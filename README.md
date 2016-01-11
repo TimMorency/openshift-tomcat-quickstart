@@ -14,7 +14,7 @@ Get Tomcat running
 Grab this quickstart project and make it work for you!
 
     cd tomcat
-    git remote add upstream -m master https://github.com/MadJavaEnterpriseFallEve2015/openshift-tomcat-quickstart.git
+    git remote add upstream -m master https://github.com/pawaitemadisoncollege/openshift-tomcat-quickstart.git
     git pull -s recursive -X theirs upstream master
     git push
 
@@ -26,7 +26,7 @@ those applications will be deployed and redeployed upon each <code>git push</cod
 applications (including the sample applications provided by Tomcat) can be deleted from that
 folder so they will no longer be deployed.
 
-The default managing account is tomcat/openshift; this can be changed by altering the 
+The default managing account is tomcat/openshift; this can, and should, be changed by altering the 
 diy/tomcat/conf/tomcat-users.xml file, committing the change within your secure OpenShift
 Git account and issuing another <code>git push</code>.
 
