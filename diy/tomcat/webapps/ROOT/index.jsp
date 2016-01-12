@@ -14,7 +14,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 --%>
-<%@ page session="false" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<%@ page session="false" %>
 <%
 java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy");
 request.setAttribute("year", sdf.format(new java.util.Date()));
@@ -22,10 +23,8 @@ request.setAttribute("tomcatUrl", "http://tomcat.apache.org/");
 request.setAttribute("tomcatDocUrl", "/docs/");
 request.setAttribute("tomcatExamplesUrl", "/examples/");
 %>
-<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
         <title><%=request.getServletContext().getServerInfo() %></title>
         <link href="favicon.ico" rel="icon" type="image/x-icon" />
         <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -61,6 +60,9 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
                     </div>
                 </div>
                 <div id="actions">
+                    <div class="button">
+                        <a class="container shadow" href="/tomee"><span>TomEE Gui</span></a>
+                    </div>
                     <div class="button">
                         <a class="container shadow" href="/manager/status"><span>Server Status</span></a>
                     </div>
@@ -110,7 +112,7 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
                         <p>For security, access to the <a href="/manager/html">manager webapp</a> is restricted.
                         Users are defined in:</p>
                         <pre>$CATALINA_HOME/conf/tomcat-users.xml</pre>
-                        <p>In Tomcat 8.0 access to the manager application is split between
+                        <p>In Tomcat 7.0 access to the manager application is split between
                            different users. &nbsp; <a href="${tomcatDocUrl}manager-howto.html">Read more...</a></p>
                         <br />
                         <h4><a href="${tomcatDocUrl}RELEASE-NOTES.txt">Release Notes</a></h4>
@@ -122,16 +124,16 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
                 <div id="low-docs" class="">
                     <div class="curved container">
                         <h3>Documentation</h3>
-                        <h4><a href="${tomcatDocUrl}">Tomcat 8.0 Documentation</a></h4>
-                        <h4><a href="${tomcatDocUrl}config/">Tomcat 8.0 Configuration</a></h4>
+                        <h4><a href="${tomcatDocUrl}">Tomcat 7.0 Documentation</a></h4>
+                        <h4><a href="${tomcatDocUrl}config/">Tomcat 7.0 Configuration</a></h4>
                         <h4><a href="http://wiki.apache.org/tomcat/FrontPage">Tomcat Wiki</a></h4>
                         <p>Find additional important configuration information in:</p>
                         <pre>$CATALINA_HOME/RUNNING.txt</pre>
                         <p>Developers may be interested in:</p>
                         <ul>
-                            <li><a href="http://tomcat.apache.org/bugreport.html">Tomcat 8.0 Bug Database</a></li>
-                            <li><a href="${tomcatDocUrl}api/index.html">Tomcat 8.0 JavaDocs</a></li>
-                            <li><a href="http://svn.apache.org/repos/asf/tomcat/tc8.0.x/">Tomcat 8.0 SVN Repository</a></li>
+                            <li><a href="http://tomcat.apache.org/bugreport.html">Tomcat 7.0 Bug Database</a></li>
+                            <li><a href="${tomcatDocUrl}api/index.html">Tomcat 7.0 JavaDocs</a></li>
+                            <li><a href="http://svn.apache.org/repos/asf/tomcat/tc7.0.x/">Tomcat 7.0 SVN Repository</a></li>
                         </ul>
                     </div>
                 </div>

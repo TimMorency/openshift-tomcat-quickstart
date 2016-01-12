@@ -15,10 +15,7 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<tomcat-users xmlns="http://tomcat.apache.org/xml"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
-              version="1.0">
+<tomcat-users>
 <!--
   NOTE:  By default, no user is included in the "manager-gui" role required
   to operate the "/manager/html" web application.  If you wish to use this app,
@@ -36,14 +33,12 @@
   <user username="both" password="tomcat" roles="tomcat,role1"/>
   <user username="role1" password="tomcat" roles="role1"/>
 -->
-<!--    <user name="super" password="super" roles="manager-gui" />
-    <user name="admin1" password="admin1"
-    roles="admin" />
-    <user name="admin2" password="admin2"
-    roles="admin,app" />
-    <user name="appuser1" password="appuser1"
-    roles="app" />-->
+  <!-- Activate those lines to get access to TomEE GUI -->
+  
+  <role rolename="tomee-admin" />
+  <user username="tomee" password="tomee" roles="tomee-admin,manager-gui" />
+  
 
-<role rolename="manager-gui"/>
-<user username="tomcat" password="openshift" roles="manager-gui"/>
+
 </tomcat-users>
+
